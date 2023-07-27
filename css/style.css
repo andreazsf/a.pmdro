@@ -162,7 +162,7 @@ section {
     padding: 3rem 0 0;
 }
 
-.home .left-container .pomo-nav a {
+.home .left-container .pomo-nav button {
     font-size: 20px;
     color: var(--gray-color);
     font-weight: 700;
@@ -170,12 +170,12 @@ section {
     border-bottom: .4rem solid transparent;
 }
 
-.home .left-container .pomo-nav a.active {
+.home .left-container .pomo-nav button.active {
     padding-bottom: 3px;
     color: var(--text-color);
 }
 
-.home .left-container .pomo-nav a:hover {
+.home .left-container .pomo-nav button:hover {
     color: var(--text-color);
     transform: scale(1.05);
     padding-bottom: 3px;

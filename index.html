@@ -28,16 +28,20 @@
             <!-- left section for pomodoro -->
             <div class="left-container">
                 <div class="timer-rect">
-                    <h1>25:00</h1>
+                    <span>
+                    <h1 id="js-minutes">25:</h1>
+                    <h1>:</h1>
+                    <h1 id="js-seconds">00</h1>
+                    </span>
                     <div class="timer-buttons">
                         <button type="button" class="restart"><i class='bx bx-undo'></i></button>
                         <button type="button" class="start-stop"><i class='bx bx-play'></i></button>
                     </div>
                 </div>
                 <div class="pomo-nav">
-                    <a href="#" class="active">pomodoro</a>
-                    <a href="#">short break</a>
-                    <a href="#">long break</a>
+                    <button type="button" class="active" id="js-mode-buttons">pomodoro</button>
+                    <button type="button" class="active" id="js-mode-buttons">short break</button>
+                    <button type="button" class="active" id="js-mode-buttons">long break</button>
                 </div>
             </div>
             <!-- right section for quotes -->
