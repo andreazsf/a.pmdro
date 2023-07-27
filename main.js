@@ -33,10 +33,9 @@ function handleMode(event) {
     if(!mode) return;
 
     switchMode(mode);
-    //stop timer if any button from pomo nav is clicked
-    startToggle = document.querySelector('#start-stop-icon');
-    stopToggle.classList.toggle('bx-start');
-    quitTimer();
+    // startToggle = document.querySelector('#start-stop-icon');
+    // startToggle.classList.toggle('bx-start');
+    stopTimer();
 }
 
 function switchMode(mode) {
@@ -51,7 +50,7 @@ function switchMode(mode) {
         .querySelectorAll('button[data-mode]')
         .forEach(e => e.classList.remove('active'));
     document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
-    // document.body.style.backgroundColor = `var(--${mode})`;
+    document.body.style.backgroundColor = `var(--${mode})`;
     document
         .getElementById('js-progress')
         .setAttribute('max', timer.remainingTime.total);
@@ -119,20 +118,20 @@ function stopTimer() {
   
     mainButton.dataset.action = 'start';
     // mainButton.textContent = 'stop';
-    startToggle.classList.toggle('bx-stop');
-    mainButton.classList.remove('active');
-}
-
-function quitTimer() {
-    clearInterval(interval);
-
-    startToggle = document.querySelector('#start-stop-icon');
-  
-    mainButton.dataset.action = 'start';
-    // mainButton.textContent = 'stop';
     startToggle.classList.toggle('bx-start');
     mainButton.classList.remove('active');
 }
+
+// function quitTimer() {
+//     clearInterval(interval);
+
+//     startToggle = document.querySelector('#start-stop-icon');
+  
+//     mainButton.dataset.action = 'start';
+//     // mainButton.textContent = 'stop';
+//     startToggle.classList.toggle('bx-start');
+//     mainButton.classList.remove('active');
+// }
 
 function updateClock() {
     const { remainingTime } = timer;
