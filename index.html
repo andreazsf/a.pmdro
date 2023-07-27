@@ -26,22 +26,26 @@
         <!-- home section -->
         <section class="home">
             <!-- left section for pomodoro -->
+            <progress id="js-progress" value="0" hidden></progress>
+            <div class="progress-bar" hidden></div>
             <div class="left-container">
                 <div class="timer-rect">
-                    <span>
-                    <h1 id="js-minutes">25</h1>
-                    <h1>:</h1>
-                    <h1 id="js-seconds">00</h1>
-                    </span>
+                    <div id="js-clock">
+                        <span>
+                            <h1 id="js-minutes">25</h1>
+                            <h1>:</h1>
+                            <h1 id="js-seconds">00</h1>
+                        </span>
+                    </div>
                     <div class="timer-buttons">
                         <button type="button" class="restart"><i class='bx bx-undo'></i></button>
-                        <button type="button" class="start-stop"><i class='bx bx-play'></i></button>
+                        <button type="button" class="start-stop" data-action="start" id="js-btn"><i class='bx bx-play' id="start-stop-icon"></i></button>
                     </div>
                 </div>
-                <div class="pomo-nav">
-                    <button type="button" class="active" id="js-mode-buttons">pomodoro</button>
-                    <button type="button" class="active" id="js-mode-buttons">short break</button>
-                    <button type="button" class="active" id="js-mode-buttons">long break</button>
+                <div class="pomo-nav" id="js-mode-buttons">
+                    <button data-mode="pomodoro" class="active" id="js-pomodoro">pomodoro</button>
+                    <button data-mode="shortBreak" class="active" id="js-short-break">short break</button>
+                    <button data-mode="longBreak" class="active" id="js-long-break">long break</button>
                 </div>
             </div>
             <!-- right section for quotes -->
@@ -67,6 +71,10 @@
                 <h1>©&nbsp; andreazsf.com, all rights reserved.</h1>
             </div>
         </footer>
+    <script src="main.js"></script>
+    <audio src="audio/backtowork.mp3" data-sound="pomodoro"></audio>
+    <audio src="audio/break.mp3" data-sound="shortBreak"></audio>
+    <audio src="audio/break.mp3" data-sound="longBreak"></audio>
     </body>
 
 </html>
