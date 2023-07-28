@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <title>a.pmdro | time your tasks!</title>
+        <title>a.pmdro — time your tasks!</title>
         <!-- browser tab icon -->
         <link rel="icon" href="assets/logo.png">
         <!-- css style -->
@@ -39,8 +39,10 @@
                     </div>
                     <div class="timer-buttons">
                         <button type="button" class="restart"><i class='bx bx-undo'></i></button>
-                        <!-- <button type="button" class="start-stop" data-action="start" id="js-btn"><i class='bx bx-play' id="start-stop-icon" id="js-icon"></i></button> -->
-                        <button type="button" class="start-stop" data-action="start" id="js-btn">start</button>
+                        <button type="button" class="start-stop" data-action="start" id="js-btn">
+                            <i class='bx bx-play' onclick="changeIcon(this)" id="start-stop-icon"></i>
+                        </button>
+                        <!-- <button onclick="changeIcon(this)" type="button" class="start-stop" data-action="start" id="js-btn">start</button> -->
                     </div>
                 </div>
                 <div class="pomo-nav" id="js-mode-buttons">
@@ -73,9 +75,15 @@
             </div>
         </footer>
         
-    <audio src="audio/backtowork.mp3" data-sound="pomodoro"></audio>
+    <audio src="audio/break.mp3" data-sound="pomodoro"></audio>
     <audio src="audio/break.mp3" data-sound="shortBreak"></audio>
     <audio src="audio/break.mp3" data-sound="longBreak"></audio>
+
+    <!-- <script>
+        function changeIcon() {
+              $('#js-btn').find("i").classList.toggle('bx-stop');
+        }
+      </script> -->
     <script src="main.js"></script>
     </body>
 

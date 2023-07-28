@@ -150,14 +150,21 @@ section {
     width: 18rem;
     height: 5rem;
     border-radius: 50px;
-    /* font-size: 30px; */
-    /* padding-top: 4px; */
+    font-size: 30px;
+    padding-top: 4px;
     cursor: pointer;
     transition: 0.3s ease;
-
-    font-size: 23px;
+    /* font-size: 23px;
     letter-spacing: 2px;
-    font-weight: 700;
+    font-weight: 700; */
+}
+
+.home .left-container .timer-rect .timer-buttons .start-stop #start-stop-icon {
+    background-color: transparent;
+    border-radius: 50px;
+    width: 18rem;
+    height: 5rem;
+    padding-top: 4px;
 }
 
 .home .left-container .timer-rect .timer-buttons .start-stop:hover {

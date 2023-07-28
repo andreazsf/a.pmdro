@@ -8,10 +8,15 @@ const timer = {
 
 let interval;
 
-const startStopToggle = document.querySelector('#start-stop-icon');
 const buttonSound = new Audio('audio/button-sound.mp3');
 
 const mainButton = document.getElementById('js-btn');
+
+let changeIcon = function(icon) {
+    icon.classList.toggle('bx-stop');
+}
+changeIcon = (icon) => icon.classList.toggle('bx-stop');
+
 mainButton.addEventListener('click', () => {
     buttonSound.play();
     const { action } = mainButton.dataset;
@@ -77,14 +82,9 @@ function startTimer() {
 
     if (timer.mode === 'pomodoro') timer.sessions++;
 
-    // stopToggle = document.querySelector('#start-stop-icon');
-    // mainButton.dataset.action = 'stop';
-    // stopToggle.classList.toggle('bx-stop');
-    // mainButton.classList.add('active');
-
     mainButton.dataset.action = 'stop';
     // startStopToggle.classList.toggle('bx-stop');
-    mainButton.textContent = 'stop';
+    // mainButton.textContent = 'stop';
     mainButton.classList.add('active');
 
     interval = setInterval(function() {
@@ -106,7 +106,7 @@ function startTimer() {
                 default:
                     switchMode('pomodoro');
         }
-        document.querySelector(`[data-sound="${timer.mode}"]`).play();
+        document.querySelector(`[data-sound="audio/${timer.mode}"]`).play();
         startTimer();
         }
 
@@ -122,20 +122,8 @@ function stopTimer() {
     // mainButton.classList.remove('active');
 
     mainButton.dataset.action = 'start';
-    mainButton.textContent = 'start';
     mainButton.classList.remove('active');
 }
-
-// function quitTimer() {
-//     clearInterval(interval);
-
-//     startToggle = document.querySelector('#start-stop-icon');
-  
-//     mainButton.dataset.action = 'start';
-//     // mainButton.textContent = 'stop';
-//     startToggle.classList.toggle('bx-start');
-//     mainButton.classList.remove('active');
-// }
 
 function updateClock() {
     const { remainingTime } = timer;
@@ -149,8 +137,8 @@ function updateClock() {
     min.textContent = minutes;
     sec.textContent = seconds;
 
-    const text = timer.mode === 'pomodoro' ? 'Get back to work!' : 'Take a break!';
-    document.title = `${minutes}:${seconds} — ${text}`;
+    const text = timer.mode === 'pomodoro' ? 'grind time!' : 'chill time!';
+    document.title = `${minutes}:${seconds} – a.pmdro: ${text}`;
 
     const progress = document.getElementById('js-progress');
     progress.value = timer[timer.mode] * 60 - timer.remainingTime.total;
