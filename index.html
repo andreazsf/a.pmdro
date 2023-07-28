@@ -18,7 +18,7 @@
         <!-- header -->
         <header class="header">
             <a href="index.html" class="logo"><img src="assets/logo-black.png" alt="logo" class="logo"></a>
-            <nav class="navbar">
+            <nav class="navbar" hidden>
                 <a href="index.html" class="active head-nav">home</a>
                 <a href="#" class="head-nav">what is a.pmdro?</a>
             </nav>
@@ -38,11 +38,11 @@
                         </span>
                     </div>
                     <div class="timer-buttons">
-                        <button type="button" class="restart"><i class='bx bx-undo'></i></button>
-                        <button type="button" class="start-stop" data-action="start" id="js-btn">
+                        <button type="button" class="restart" id="js-restart" hidden><i class='bx bx-undo'></i></button>
+                        <!-- <button type="button" class="start-stop" data-action="start" id="js-btn">
                             <i class='bx bx-play' onclick="changeIcon(this)" id="start-stop-icon"></i>
-                        </button>
-                        <!-- <button onclick="changeIcon(this)" type="button" class="start-stop" data-action="start" id="js-btn">start</button> -->
+                        </button> -->
+                        <button type="button" class="start-stop" data-action="start" id="js-btn">start</button>
                     </div>
                 </div>
                 <div class="pomo-nav" id="js-mode-buttons">

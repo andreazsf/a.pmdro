@@ -12,10 +12,10 @@ const buttonSound = new Audio('audio/button-sound.mp3');
 
 const mainButton = document.getElementById('js-btn');
 
-let changeIcon = function(icon) {
-    icon.classList.toggle('bx-stop');
-}
-changeIcon = (icon) => icon.classList.toggle('bx-stop');
+// let changeIcon = function(icon) {
+//     icon.classList.toggle('bx-stop');
+// }
+// changeIcon = (icon) => icon.classList.toggle('bx-stop');
 
 mainButton.addEventListener('click', () => {
     buttonSound.play();
@@ -82,9 +82,13 @@ function startTimer() {
 
     if (timer.mode === 'pomodoro') timer.sessions++;
 
+    // stopToggle = document.querySelector('#start-stop-icon');
     mainButton.dataset.action = 'stop';
-    // startStopToggle.classList.toggle('bx-stop');
-    // mainButton.textContent = 'stop';
+    // stopToggle.classList.toggle('bx-stop');
+    mainButton.classList.add('active');
+
+    mainButton.dataset.action = 'stop';
+    mainButton.textContent = 'stop';
     mainButton.classList.add('active');
 
     interval = setInterval(function() {
@@ -106,7 +110,7 @@ function startTimer() {
                 default:
                     switchMode('pomodoro');
         }
-        document.querySelector(`[data-sound="audio/${timer.mode}"]`).play();
+        document.querySelector(`[data-sound="${timer.mode}"]`).play();
         startTimer();
         }
 
@@ -116,14 +120,30 @@ function startTimer() {
 function stopTimer() {
     clearInterval(interval);
 
+    mainButton.dataset.action = 'start';
+    mainButton.textContent = 'start';
+    mainButton.classList.add('active');
+
     // startToggle = document.querySelector('#start-stop-icon');
     // mainButton.dataset.action = 'start';
     // startToggle.classList.toggle('bx-start');
     // mainButton.classList.remove('active');
 
-    mainButton.dataset.action = 'start';
-    mainButton.classList.remove('active');
+    // mainButton.dataset.action = 'start';
+    // mainButton.classList.remove('active');
+    // startToggle.classList.toggle('bx-start');
 }
+
+// function quitTimer() {
+//     clearInterval(interval);
+
+//     startToggle = document.querySelector('#start-stop-icon');
+  
+//     mainButton.dataset.action = 'start';
+//     // mainButton.textContent = 'stop';
+//     startToggle.classList.toggle('bx-start');
+//     mainButton.classList.remove('active');
+// }
 
 function updateClock() {
     const { remainingTime } = timer;

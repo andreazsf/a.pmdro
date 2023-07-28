@@ -147,25 +147,27 @@ section {
 .home .left-container .timer-rect .timer-buttons .start-stop {
     background-color: var(--text-color);
     color: var(--accent-color);
-    width: 18rem;
+    /* width: 18rem; */
+    width: 100%;
     height: 5rem;
     border-radius: 50px;
-    font-size: 30px;
-    padding-top: 4px;
+    /* font-size: 30px; */
+    /* padding-top: 4px; */
     cursor: pointer;
     transition: 0.3s ease;
-    /* font-size: 23px;
+
+    font-size: 20px;
     letter-spacing: 2px;
-    font-weight: 700; */
+    font-weight: 700;
 }
 
-.home .left-container .timer-rect .timer-buttons .start-stop #start-stop-icon {
+/* .home .left-container .timer-rect .timer-buttons .start-stop #start-stop-icon {
     background-color: transparent;
     border-radius: 50px;
     width: 18rem;
     height: 5rem;
     padding-top: 4px;
-}
+} */
 
 .home .left-container .timer-rect .timer-buttons .start-stop:hover {
     transform: scale(1.05);
@@ -250,7 +252,7 @@ section {
 }
 
 .home .right-container .quote-rect a:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
 /* footer section */
