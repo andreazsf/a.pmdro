@@ -8,7 +8,9 @@ const timer = {
 
 let interval;
 
-const buttonSound = new Audio('button-sound.mp3');
+const startStopToggle = document.querySelector('#start-stop-icon');
+const buttonSound = new Audio('audio/button-sound.mp3');
+
 const mainButton = document.getElementById('js-btn');
 mainButton.addEventListener('click', () => {
     buttonSound.play();
@@ -22,19 +24,15 @@ mainButton.addEventListener('click', () => {
 
 const modeButtons = document.querySelector('#js-mode-buttons');
 
-//listens or monitors
-modeButtons.addEventListener('click', handleMode);
+modeButtons.addEventListener('click', handleMode); //listens or monitors
 
-// function to check which event or button clicked
-function handleMode(event) {
-    //*.target.dataset is used to access DATA from the * object
-    const { mode } = event.target.dataset;
+function handleMode(event) { // function to check which event or button clicked
+   
+    const { mode } = event.target.dataset; //*.target.dataset is used to access DATA from the * object
 
     if(!mode) return;
 
     switchMode(mode);
-    // startToggle = document.querySelector('#start-stop-icon');
-    // startToggle.classList.toggle('bx-start');
     stopTimer();
 }
 
@@ -50,7 +48,7 @@ function switchMode(mode) {
         .querySelectorAll('button[data-mode]')
         .forEach(e => e.classList.remove('active'));
     document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
-    document.body.style.backgroundColor = `var(--${mode})`;
+    // document.body.style.backgroundColor = `var(--${mode})`;
     document
         .getElementById('js-progress')
         .setAttribute('max', timer.remainingTime.total);
@@ -77,12 +75,16 @@ function startTimer() {
     let { total } = timer.remainingTime;
     const endTime = Date.parse(new Date()) + total * 1000;
 
-    stopToggle = document.querySelector('#start-stop-icon');
-
     if (timer.mode === 'pomodoro') timer.sessions++;
 
+    // stopToggle = document.querySelector('#start-stop-icon');
+    // mainButton.dataset.action = 'stop';
+    // stopToggle.classList.toggle('bx-stop');
+    // mainButton.classList.add('active');
+
     mainButton.dataset.action = 'stop';
-    stopToggle.classList.toggle('bx-stop');
+    // startStopToggle.classList.toggle('bx-stop');
+    mainButton.textContent = 'stop';
     mainButton.classList.add('active');
 
     interval = setInterval(function() {
@@ -114,11 +116,13 @@ function startTimer() {
 function stopTimer() {
     clearInterval(interval);
 
-    startToggle = document.querySelector('#start-stop-icon');
-  
+    // startToggle = document.querySelector('#start-stop-icon');
+    // mainButton.dataset.action = 'start';
+    // startToggle.classList.toggle('bx-start');
+    // mainButton.classList.remove('active');
+
     mainButton.dataset.action = 'start';
-    // mainButton.textContent = 'stop';
-    startToggle.classList.toggle('bx-start');
+    mainButton.textContent = 'start';
     mainButton.classList.remove('active');
 }
 
