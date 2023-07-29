@@ -18,7 +18,7 @@
         <!-- header -->
         <header class="header">
             <a href="index.html" class="logo"><img src="assets/logo-black.png" alt="logo" class="logo"></a>
-            <nav class="navbar" hidden>
+            <nav class="navbar">
                 <a href="index.html" class="active head-nav">home</a>
                 <a href="#" class="head-nav">what is a.pmdro?</a>
             </nav>
@@ -39,15 +39,15 @@
                     </div>
                     <div class="timer-buttons">
                         <button type="button" class="restart" id="js-restart" hidden><i class='bx bx-undo'></i></button>
-                        <!-- <button type="button" class="start-stop" data-action="start" id="js-btn">
-                            <i class='bx bx-play' onclick="changeIcon(this)" id="start-stop-icon"></i>
-                        </button> -->
-                        <button type="button" class="start-stop" data-action="start" id="js-btn">start</button>
+                        <button type="button" class="bx bx-play start-stop" data-action="start" id="js-btn" onclick="changeIcon(this)">
+                            <!-- <i class='bx bx-play' id="start-stop-icon"></i> -->
+                        </button>
+                        <!-- <button type="button" class="bx bx-play start-stop" data-action="start" id="js-btn"></button> -->
                     </div>
                 </div>
                 <div class="pomo-nav" id="js-mode-buttons">
                     <button data-mode="pomodoro" class="active" id="js-pomodoro">pomodoro</button>
-                    <button data-mode="shortBreak" class="active" id="js-short-break">short break</button>
+                    <button data-mode="shortBreak" class="active" id="js-short-break" onclick="resetToggle()">short break</button>
                     <button data-mode="longBreak" class="active" id="js-long-break">long break</button>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <h1>“The secret of<br>getting ahead is getting<br>started.”</h1>
                     <span>
                         <h2>– Mark Twain</h2>
-                        <a href="#"><i class='bx bxs-chevrons-right'></i></a>
+                        <button type="button"><i class='bx bxs-chevrons-right'></i></button>
                     </span>
                 </div>
             </div>
@@ -74,17 +74,12 @@
                 <h1>©&nbsp; andreazsf.com, all rights reserved.</h1>
             </div>
         </footer>
-        
-    <audio src="audio/break.mp3" data-sound="pomodoro"></audio>
-    <audio src="audio/break.mp3" data-sound="shortBreak"></audio>
-    <audio src="audio/break.mp3" data-sound="longBreak"></audio>
-
-    <!-- <script>
-        function changeIcon() {
-              $('#js-btn').find("i").classList.toggle('bx-stop');
-        }
-      </script> -->
-    <script src="main.js"></script>
+        <!-- audio srcs -->
+        <audio src="audio/break.mp3" data-sound="pomodoro"></audio>
+        <audio src="audio/break.mp3" data-sound="shortBreak"></audio>
+        <audio src="audio/break.mp3" data-sound="longBreak"></audio>
+        <!-- link script -->
+        <script src="main.js"></script>
     </body>
 
 </html>
