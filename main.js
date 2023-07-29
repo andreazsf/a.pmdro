@@ -61,7 +61,14 @@ function switchMode(mode) {
         .querySelectorAll('button[data-mode]')
         .forEach(e => e.classList.remove('active'));
     document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
-    // document.body.style.backgroundColor = `var(--${mode})`;
+    document
+        .getElementById("timer-rect")
+        .style
+        .backgroundColor = `var(--${mode})`;
+    document
+        .getElementById("js-btn")
+        .style
+        .color = `var(--${mode})`;
     document
         .getElementById('js-progress')
         .setAttribute('max', timer.remainingTime.total);

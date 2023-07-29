@@ -19,6 +19,10 @@
     --white-color: #FDFDFD;
     --gray-color: #6F7378;
     --shadow: rgba(0,0,0,0.2);
+
+    --pomodoro: #92A9BD;
+    --shortBreak: #D3DEDC;
+    --longBreak: #e2a89f;
 }
 
 .dark-mode {
@@ -188,6 +192,7 @@ section {
     font-weight: 700;
     transition: 0.3s ease;
     border-bottom: .4rem solid transparent;
+    cursor: pointer;
 }
 
 .home .left-container .pomo-nav button.active {
@@ -253,6 +258,7 @@ section {
     
     text-decoration: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .home .right-container .quote-rect button:hover {
