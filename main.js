@@ -17,7 +17,7 @@ mainButton.addEventListener("click", () => {
   const { action } = mainButton.dataset;
   if (action === "start") {
     startTimer();
-  } else {
+  } else if (action !== "start") {
     stopTimer();
   }
 });
