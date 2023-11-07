@@ -39,7 +39,7 @@ const modeButtons = document.querySelector("#js-mode-buttons");
 
 modeButtons.addEventListener("click", handleMode); //listens or monitors
 
-function handleMode(event, mainButton) {
+function handleMode(event) {
   // function to check which event or button clicked
 
   const { mode } = event.target.dataset; //*.target.dataset is used to access DATA from the * object
