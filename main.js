@@ -47,6 +47,7 @@ function handleMode(event) {
   if (!mode) return;
 
   switchMode(mode);
+  mainButton.classList.remove("bx-stop"); // Remove "bx-stop" class
   stopTimer();
 }
 
@@ -96,7 +97,7 @@ function startTimer() {
   if (timer.mode === "pomodoro") timer.sessions++;
 
   mainButton.dataset.action = "stop";
-  //   mainButton.classList.add("bx-stop");
+  mainButton.classList.add("bx-stop");
   mainButton.classList.add("active");
 
   // mainButton.dataset.action = 'stop';
