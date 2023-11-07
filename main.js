@@ -151,3 +151,31 @@ function updateClock() {
 document.addEventListener("DOMContentLoaded", () => {
   switchMode("pomodoro");
 });
+
+// for quote generation function
+
+const text = document.getElementById("quote");
+const author = document.getElementById("author");
+
+const nextQuote = async () => {
+  // quotes api
+  var url = "https://type.fit/api/quotes";
+  // fetch data from api
+  const response = await fetch(url);
+
+  const allQuotes = await response.json(); // converts into json file
+  const indx = Math.floor(Math.random() * allQuotes.length); // generates random num bet 0 and length of quotes
+  const quote = allQuotes[indx].text; // stores quotes randomly
+  const auth = allQuotes[indx].author; // stores author with respect to quote
+
+  if (auth == null || auth == "type.fit") {
+    newAuth = "Anonymous";
+  }
+
+  let newAuth = auth.replace(", type.fit", "");
+
+  text.innerHTML = quote;
+  author.innerHTML = "- " + newAuth;
+};
+
+nextQuote();
