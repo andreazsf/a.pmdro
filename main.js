@@ -30,10 +30,8 @@ mainButton.addEventListener("click", () => {
 
 // changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
-function resetToggle() {
-  var toggleIcon = document.getElementById("js-btn");
-  toggleIcon.classList.toggle("bx-play");
-  toggleIcon.classList.toggle("bx-play");
+function resetToggle(mainButton) {
+  mainButton.classList.toggle("bx-play");
 }
 
 const modeButtons = document.querySelector("#js-mode-buttons");
