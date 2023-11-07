@@ -30,10 +30,10 @@ let changeIcon = function (icon) {
 
 changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
-function resetToggle() {
-  var toggleIcon = document.getElementById("js-btn");
-  toggleIcon.classList.toggle("bx-play");
-}
+// function resetToggle() {
+//   var toggleIcon = document.getElementById("js-btn");
+//   toggleIcon.classList.toggle("bx-play");
+// }
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
