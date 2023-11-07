@@ -16,8 +16,10 @@ mainButton.addEventListener("click", () => {
   buttonSound.play();
   const { action } = mainButton.dataset;
   if (action === "start") {
+    mainButton.classList.toggle("bx-stop");
     startTimer();
   } else {
+    mainButton.classList.toggle("bx-play");
     stopTimer();
   }
 });
@@ -30,10 +32,10 @@ mainButton.addEventListener("click", () => {
 
 // changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
-function resetToggle() {
-  var toggleIcon = document.getElementById("js-btn");
-  toggleIcon.classList.toggle("bx-play");
-}
+// function resetToggle() {
+//   var toggleIcon = document.getElementById("js-btn");
+//   toggleIcon.classList.toggle("bx-play");
+// }
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
