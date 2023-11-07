@@ -30,10 +30,11 @@ mainButton.addEventListener("click", () => {
 
 // changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
-// function resetToggle() {
-//   var toggleIcon = document.getElementById("js-btn");
-//   toggleIcon.classList.toggle("bx-play");
-// }
+function resetToggle() {
+  var toggleIcon = document.getElementById("js-btn");
+  toggleIcon.classList.toggle("bx-play");
+  toggleIcon.classList.toggle("bx-play");
+}
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
@@ -132,7 +133,7 @@ function stopTimer() {
   clearInterval(interval);
 
   mainButton.dataset.action = "start";
-  toggleIcon.classList.toggle("bx-play");
+  //   toggleIcon.classList.toggle("bx-play");
   mainButton.classList.remove("active");
 
   //   mainButton.dataset.action = "start";
