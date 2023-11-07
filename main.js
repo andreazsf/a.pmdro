@@ -16,11 +16,10 @@ mainButton.addEventListener("click", () => {
   buttonSound.play();
   const { action } = mainButton.dataset;
   if (action === "start") {
+    mainButton.classList.toggle("bx-play");
     startTimer();
-    changeIcon("bx-stop"); // Change the icon to "bx-stop" when starting the timer
   } else {
     stopTimer();
-    changeIcon("bx-play"); // Change the icon to "bx-play" when stopping the timer
   }
 });
 
@@ -28,7 +27,7 @@ mainButton.addEventListener("click", () => {
 //   icon.classList.toggle("bx-stop");
 // };
 
-// //changes or toggle icon
+//changes or toggle icon
 
 // changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
@@ -36,11 +35,6 @@ mainButton.addEventListener("click", () => {
 //   var toggleIcon = document.getElementById("js-btn");
 //   toggleIcon.classList.toggle("bx-play");
 // }
-
-function changeIcon(iconClass) {
-  mainButton.classList.remove("bx-play", "bx-stop"); // Remove both classes
-  mainButton.classList.add(iconClass); // Add the provided icon class
-}
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
