@@ -22,18 +22,25 @@ mainButton.addEventListener("click", () => {
   }
 });
 
-let changeIcon = function (icon) {
-  icon.classList.toggle("bx-stop");
-};
+// let changeIcon = function (icon) {
+//   icon.classList.toggle("bx-stop");
+// };
 
-//changes or toggle icon
+// //changes or toggle icon
 
-changeIcon = (icon) => icon.classList.toggle("bx-stop");
+// changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
 // function resetToggle() {
 //   var toggleIcon = document.getElementById("js-btn");
 //   toggleIcon.classList.toggle("bx-play");
 // }
+
+// Toggle the icon class
+function toggleIcon(isPlay) {
+  const icon = document.getElementById("js-btn");
+  icon.classList.toggle("bx-play", isPlay);
+  icon.classList.toggle("bx-stop", !isPlay);
+}
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
@@ -133,6 +140,7 @@ function stopTimer() {
 
   mainButton.dataset.action = "start";
   // toggleIcon.classList.toggle('bx-play');
+  toggleIcon(true); // Change the icon to "bx-play"
   mainButton.classList.remove("active");
 
   // mainButton.dataset.action = 'start';
