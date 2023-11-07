@@ -24,17 +24,13 @@ mainButton.addEventListener("click", () => {
   }
 });
 
+//changes or toggle icon - dump code
+
 // let changeIcon = function (icon) {
 //   icon.classList.toggle("bx-stop");
 // };
 
-//changes or toggle icon
-
 // changeIcon = (icon) => icon.classList.toggle("bx-stop");
-
-// function resetToggle(mainButton) {
-//   mainButton.classList.toggle("bx-stop");
-// }
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
@@ -89,8 +85,6 @@ function getRemainingTime(endTime) {
   };
 }
 
-// const toggleIcon = document.querySelector("#js-btn");
-
 function startTimer() {
   let { total } = timer.remainingTime;
   const endTime = Date.parse(new Date()) + total * 1000;
@@ -100,10 +94,6 @@ function startTimer() {
   mainButton.dataset.action = "stop";
   mainButton.classList.add("bx-stop");
   mainButton.classList.add("active");
-
-  // mainButton.dataset.action = 'stop';
-  // mainButton.textContent = 'stop';
-  // mainButton.classList.add('active');
 
   interval = setInterval(function () {
     timer.remainingTime = getRemainingTime(endTime);
@@ -137,10 +127,6 @@ function stopTimer() {
   mainButton.classList.remove("bx-stop");
   mainButton.classList.add("bx-play");
   mainButton.classList.remove("active");
-
-  //   mainButton.dataset.action = "start";
-  //   mainButton.textContent = "start";
-  //   mainButton.classList.add("active");
 }
 
 function updateClock() {
