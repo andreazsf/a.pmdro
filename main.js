@@ -96,7 +96,7 @@ function startTimer() {
   if (timer.mode === "pomodoro") timer.sessions++;
 
   mainButton.dataset.action = "stop";
-  mainButton.classList.add("bx-stop");
+  //   mainButton.classList.add("bx-stop");
   mainButton.classList.add("active");
 
   // mainButton.dataset.action = 'stop';
