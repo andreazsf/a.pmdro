@@ -137,7 +137,7 @@ function stopTimer() {
   mainButton.classList.remove("active");
 
   mainButton.dataset.action = "start";
-  mainButton.textContent = "start";
+  //   mainButton.textContent = "start";
   mainButton.classList.add("active");
 }
 
