@@ -16,7 +16,6 @@ mainButton.addEventListener("click", () => {
   buttonSound.play();
   const { action } = mainButton.dataset;
   if (action === "start") {
-    mainButton.classList.add("bx-play");
     startTimer();
   } else {
     stopTimer();
@@ -133,7 +132,8 @@ function stopTimer() {
   clearInterval(interval);
 
   mainButton.dataset.action = "start";
-  //   toggleIcon.classList.toggle("bx-play");
+  mainButton.classList.remove("bx-stop");
+  mainButton.classList.add("bx-play");
   mainButton.classList.remove("active");
 
   //   mainButton.dataset.action = "start";
