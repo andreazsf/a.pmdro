@@ -23,13 +23,13 @@ mainButton.addEventListener("click", () => {
   }
 });
 
-// let changeIcon = function (icon) {
-//   icon.classList.toggle("bx-stop");
-// };
+let changeIcon = function (icon) {
+  icon.classList.toggle("bx-stop");
+};
 
 //changes or toggle icon
 
-// changeIcon = (icon) => icon.classList.toggle("bx-stop");
+changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
 // function resetToggle() {
 //   var toggleIcon = document.getElementById("js-btn");
