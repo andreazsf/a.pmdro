@@ -47,6 +47,7 @@ function handleMode(event) {
   if (!mode) return;
 
   switchMode(mode);
+  mainButton.classList.toggle("bx-play");
   stopTimer();
 }
 
