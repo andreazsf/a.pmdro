@@ -132,7 +132,7 @@ function stopTimer() {
   clearInterval(interval);
 
   mainButton.dataset.action = "start";
-  toggleIcon.classList.toggle("bx-play");
+  //   toggleIcon.classList.toggle("bx-play");
   mainButton.classList.remove("active");
 
   //   mainButton.dataset.action = "start";
