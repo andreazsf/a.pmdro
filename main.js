@@ -8,9 +8,11 @@ const timer = {
 
 let interval;
 
-const buttonSound = new Audio("audio/button-sound.mp3");
-
+// gets the id of play/stop button
 const mainButton = document.getElementById("js-btn");
+
+// initiates button sound
+const buttonSound = new Audio("audio/button-sound.mp3");
 
 mainButton.addEventListener("click", () => {
   buttonSound.play();
