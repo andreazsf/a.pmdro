@@ -16,6 +16,7 @@ mainButton.addEventListener("click", () => {
   buttonSound.play();
   const { action } = mainButton.dataset;
   if (action === "start") {
+    mainButton.classList.toggle("bx-play");
     startTimer();
   } else {
     stopTimer();
@@ -30,9 +31,9 @@ mainButton.addEventListener("click", () => {
 
 // changeIcon = (icon) => icon.classList.toggle("bx-stop");
 
-function resetToggle(mainButton) {
-  mainButton.classList.toggle("bx-stop");
-}
+// function resetToggle(mainButton) {
+//   mainButton.classList.toggle("bx-stop");
+// }
 
 const modeButtons = document.querySelector("#js-mode-buttons");
 
@@ -86,7 +87,7 @@ function getRemainingTime(endTime) {
   };
 }
 
-const toggleIcon = document.querySelector("#js-btn");
+// const toggleIcon = document.querySelector("#js-btn");
 
 function startTimer() {
   let { total } = timer.remainingTime;
@@ -95,7 +96,7 @@ function startTimer() {
   if (timer.mode === "pomodoro") timer.sessions++;
 
   mainButton.dataset.action = "stop";
-  toggleIcon.classList.toggle("bx-stop");
+  mainButton.classList.toggle("bx-stop");
   mainButton.classList.add("active");
 
   // mainButton.dataset.action = 'stop';
