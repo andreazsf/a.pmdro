@@ -96,7 +96,7 @@ function startTimer() {
   if (timer.mode === "pomodoro") timer.sessions++;
 
   mainButton.dataset.action = "stop";
-  // toggleIcon.classList.toggle('bx-stop');
+  toggleIcon.classList.toggle("bx-stop");
   mainButton.classList.add("active");
 
   // mainButton.dataset.action = 'stop';
@@ -132,7 +132,7 @@ function stopTimer() {
   clearInterval(interval);
 
   mainButton.dataset.action = "start";
-  //   toggleIcon.classList.toggle("bx-play");
+  toggleIcon.classList.toggle("bx-play");
   mainButton.classList.remove("active");
 
   //   mainButton.dataset.action = "start";
