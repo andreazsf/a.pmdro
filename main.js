@@ -16,7 +16,7 @@ mainButton.addEventListener("click", () => {
   buttonSound.play();
   const { action } = mainButton.dataset;
   if (action === "start") {
-    mainButton.classList.toggle("bx-play");
+    mainButton.classList.add("bx-play");
     startTimer();
   } else {
     stopTimer();
@@ -47,7 +47,6 @@ function handleMode(event) {
   if (!mode) return;
 
   switchMode(mode);
-  mainButton.classList.toggle("bx-play");
   stopTimer();
 }
 
@@ -97,7 +96,7 @@ function startTimer() {
   if (timer.mode === "pomodoro") timer.sessions++;
 
   mainButton.dataset.action = "stop";
-  mainButton.classList.toggle("bx-stop");
+  mainButton.classList.add("bx-stop");
   mainButton.classList.add("active");
 
   // mainButton.dataset.action = 'stop';
