@@ -175,7 +175,7 @@ const nextQuote = async () => {
   let newAuth = auth.replace(", type.fit", "");
 
   text.innerHTML = quote;
-  author.innerHTML = "- " + newAuth;
+  author.innerHTML = "– " + newAuth;
 };
 
 nextQuote();
