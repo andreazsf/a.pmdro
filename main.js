@@ -168,11 +168,12 @@ const nextQuote = async () => {
   const quote = allQuotes[indx].text; // stores quotes randomly
   const auth = allQuotes[indx].author; // stores author with respect to quote
 
+  // replaces author name format
   if (auth == null || auth == "type.fit") {
     newAuth = "Anonymous";
+  } else {
+    newAuth = auth.replace(", type.fit", "");
   }
-
-  let newAuth = auth.replace(", type.fit", "");
 
   text.innerHTML = quote;
   author.innerHTML = "– " + newAuth;
