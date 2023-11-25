@@ -63,11 +63,11 @@ body {
   /* height: 5rem; */
   height: 7rem;
   cursor: default;
-
-  position: relative;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .navbar a {
@@ -432,7 +432,57 @@ body {
 
 /* (480x800) Android */
 @media only screen and (min-device-width: 480px) and (max-device-width: 800px) {
-  /* insert styles here */
+  .home {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding-top: 56px;
+  }
+  .left-container {
+    min-width: 100%;
+    height: 50%;
+    margin: 0 0 24px;
+    align-items: center;
+  }
+
+  .timer-rect {
+    min-width: 100%;
+  }
+
+  .right-container {
+    position: relative;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 48%;
+    padding-bottom: 56px;
+  }
+
+  .home .right-container .quote-rect {
+    right: 0;
+    min-width: 100%;
+    min-height: 30vh;
+  }
+
+  .home .right-container .quote-rect .quote-text #quote {
+    text-align: center;
+    /* min-height: 160px; */
+  }
+
+  .home .right-container .quote-rect span {
+    margin-top: 48px;
+    width: 100%;
+  }
+
+  .home .right-container .quote-rect button {
+    margin-right: 8px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .home .right-container .quote-rect button:hover {
+    transform: scale(1);
+  }
 }
 
 /* (640x960) iPhone 4 & 4S */
@@ -452,7 +502,57 @@ body {
 
 /* (1024x768) iPad 1 & 2, XGA */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* insert styles here */
+  .home {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding-top: 56px;
+  }
+  .left-container {
+    min-width: 100%;
+    height: 50%;
+    margin: 0 0 24px;
+    align-items: center;
+  }
+
+  .timer-rect {
+    min-width: 100%;
+  }
+
+  .right-container {
+    position: relative;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 48%;
+    padding-bottom: 56px;
+  }
+
+  .home .right-container .quote-rect {
+    right: 0;
+    min-width: 100%;
+    min-height: 30vh;
+  }
+
+  .home .right-container .quote-rect .quote-text #quote {
+    text-align: center;
+    /* min-height: 160px; */
+  }
+
+  .home .right-container .quote-rect span {
+    margin-top: 48px;
+    width: 100%;
+  }
+
+  .home .right-container .quote-rect button {
+    margin-right: 8px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .home .right-container .quote-rect button:hover {
+    transform: scale(1);
+  }
 }
 
 /* (768x1024) iPad 1 & 2, Portrait */
@@ -475,32 +575,138 @@ body {
   /* insert styles here */
 }
 
-/* (1366x768) WXGA Display */
-@media screen and (max-width: 1366px) {
-  /* insert styles here */
+/* rabbit hole dimension */
+@media screen and (max-width: 1206px) {
+  .home {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding-top: 56px;
+  }
+  .left-container {
+    min-width: 100%;
+    height: 50%;
+    margin: 0 0 24px;
+    align-items: center;
+  }
+
+  .timer-rect {
+    min-width: 100%;
+  }
+
+  .right-container {
+    position: relative;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 48%;
+    padding-bottom: 56px;
+  }
+
+  .home .right-container .quote-rect {
+    right: 0;
+    min-width: 100%;
+    min-height: 30vh;
+  }
+
+  .home .right-container .quote-rect .quote-text #quote {
+    text-align: center;
+    /* min-height: 160px; */
+  }
+
+  .home .right-container .quote-rect span {
+    margin-top: 48px;
+    width: 100%;
+  }
+
+  .home .right-container .quote-rect button {
+    margin-right: 8px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .home .right-container .quote-rect button:hover {
+    transform: scale(1);
+  }
 }
 
 /* (1280x1024) SXGA Display */
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
+}
+
+/* (1366x768) WXGA Display */
+@media screen and (min-width: 1366px) {
   /* insert styles here */
 }
 
 /* (1440x900) WXGA+ Display */
-@media screen and (max-width: 1440px) {
-  /* insert styles here */
-}
-
-/* (1680x1050) WSXGA+ Display */
-@media screen and (max-width: 1680px) {
-  /* insert styles here */
-}
-
-/* (1920x1080) Full HD Display */
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 1440px) {
   /* insert styles here */
 }
 
 /* (1600x900) HD+ Display */
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1600px) {
   /* insert styles here */
+}
+
+/* (1680x1050) WSXGA+ Display */
+@media screen and (min-width: 1680px) {
+  .left-container,
+  .right-container {
+    transform: scale(1.2);
+    margin: 0 3%;
+  }
+
+  .header,
+  .footer {
+    transform: scale(1.4);
+  }
+
+  .header {
+    height: 200px;
+  }
+
+  .footer {
+    margin: 0 10%;
+    height: 80px;
+  }
+
+  .footer-text {
+    width: 30vw;
+  }
+
+  .footer-links {
+    width: 31vw;
+  }
+}
+
+/* (1920x1080) Full HD Display */
+@media screen and (min-width: 2560px) {
+  .left-container,
+  .right-container {
+    transform: scale(1.6);
+    margin: 0 10%;
+  }
+
+  .header,
+  .footer {
+    transform: scale(1.4);
+  }
+
+  .header {
+    height: 200px;
+  }
+
+  .footer {
+    margin: 0 10%;
+    height: 80px;
+  }
+
+  .footer-text {
+    width: 30vw;
+  }
+
+  .footer-links {
+    width: 31vw;
+  }
 }
