@@ -679,6 +679,9 @@ body {
 
 /* (1280x1024) SXGA Display */
 @media screen and (min-width: 1280px) {
+  html {
+    overflow: hidden;
+  }
 }
 
 /* (1366x768) WXGA Display */
